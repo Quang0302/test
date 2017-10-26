@@ -1,0 +1,122 @@
+
+<!-- saved from url=(0051)https://ckeditor.com/assets/iframes/newsletter.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+	.dialog-header {
+		font-size: 3.7rem;
+		font-weight: 200;
+		text-align:center;
+		text-transform: none;
+		margin: 0 0 4rem;
+	}
+
+	#mce-EMAIL {
+		color: rgba(5,22,42,.87);
+		width: 100%;
+		height: 41px;
+		font-size: 19px;
+		line-height: 1.45;
+		border-radius :4px;
+		border: 1px solid #ccc;
+		background-color: #fff;
+		padding: 6px 12px;
+	}
+
+	.btn.btn--big {
+		display: inline-block;
+		text-decoration: none;
+		text-align: center;
+		font-weight: 600;
+		line-height: 1;
+		cursor: pointer;
+		border-radius: 4px;
+		transition: all .2s ease-in-out;
+		background-color: #007ac9;
+		border: 2px solid #007ac9;
+		color: #fff;
+		padding: 13px 25px;
+		font-size: 1.2rem;
+	}
+	.btn.btn--big.alone {
+		margin-top: 30px;
+	}
+
+	.form-group {
+		text-align: center;
+	}
+
+	#mce-responses {
+		font-family: 'Arial';
+		font-size: 1rem !important;
+		margin: 10px 0;
+	}
+
+	#mce-responses a {
+		display: none !important;
+	}
+
+	#mce-error-response {
+		color: #f56764;
+	}
+
+	#mce-success-response {
+		color: #27d465;
+	}
+</style>
+
+<style type="text/css">#mc_embed_signup input.mce_inline_error { border-color:#6B0505; } #mc_embed_signup div.mce_inline_error { margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff; }</style></head><body style="zoom: 1;"><form action="https://ckeditor.us10.list-manage.com/subscribe/post?u=9c10324d9c722f3329b855dfd&amp;id=844b2127ac&amp;group[8965][1]=1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate">
+	<div class="form-group">
+		<label style="display:none" for="mce-EMAIL" class="sr-only">Email</label>
+		<input type="email" id="mce-EMAIL" name="EMAIL" class="form-control" placeholder="Your email" required="" aria-required="true">
+
+		<div id="mce-responses" class="clear">
+			<div id="mce-error-response" class="response hidden"></div>
+			<div id="mce-success-response" class="response hidden"></div>
+		</div>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn--big alone" id="mc-embedded-subscribe">Subscribe</button>
+	</div>
+	<div style="position: absolute; left: -5000px;" aria-hidden="true">
+		<input type="text" name="b_9c10324d9c722f3329b855dfd_844b2127ac" tabindex="-1" value="">
+	</div>
+</form>
+
+<script type="text/javascript" src="./mc-validate.js.tải xuống"></script>
+<script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[3]='COMPANY';ftypes[3]='text';fnames[1]='FIRSTNAME';ftypes[1]='text';fnames[2]='LASTNAME';ftypes[2]='text';fnames[5]='SOURCE';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
+<script>
+	document.querySelector( '#mce-EMAIL' ).focus();
+	const form = document.getElementById( 'mc-embedded-subscribe-form' );
+	const successResponse = form.querySelector( '#mce-success-response' );
+	const errorResponse = form.querySelector( '#mce-error-response' );
+
+	const emailField =  document.getElementById( 'mce-EMAIL');
+	const submitButton = document.getElementById( 'mc-embedded-subscribe');
+
+	let checkResultsInterval = null;
+	let killTimeout = null;
+
+	form.addEventListener( 'submit', () => {
+		checkResultsInterval = setInterval( () => {
+			if ( successResponse.textContent.length || errorResponse.textContent.length ) {
+				if ( successResponse.textContent.length ) {
+					clearInterval(checkResultsInterval);
+				}
+				clearTimeout( killTimeout );
+			}
+
+			if ( successResponse.textContent.length ) {
+				submitButton.style.display = 'none';
+				emailField.style.display = 'none';
+			} else if ( errorResponse.textContent.length ) {
+				submitButton.classList.remove('alone');
+			}
+		}, 100 );
+
+		killTimeout = setTimeout( () => {
+			clearInterval( checkResultsInterval );
+		}, 5000 );
+	});
+</script>
+
+</body></html>
